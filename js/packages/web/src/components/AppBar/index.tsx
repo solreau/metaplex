@@ -31,11 +31,13 @@ const UserActions = () => {
           <Button className="app-btn">Create</Button>
         </Link>
       ) : null}
+       {canCreate ? (
       <Link to={`/auction/create/0`}>
         <Button className="connector" type="primary">
           Sell
         </Button>
       </Link>
+      ) : null}
     </>
   );
 };
@@ -50,15 +52,15 @@ const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
       }}
     >
       <Link to={`/`}>
-        <Button className="app-btn">Explore</Button>
+        <Button className="app-btn">explore</Button>
       </Link>
       <Link to={`/artworks`}>
         <Button className="app-btn">
-          {connected ? 'My Items' : 'Artworks'}
+          {connected ? 'my murals' : 'murals'}
         </Button>
       </Link>
       <Link to={`/artists`}>
-        <Button className="app-btn">Creators</Button>
+        <Button className="app-btn">creators</Button>
       </Link>
     </div>
   );
@@ -79,19 +81,19 @@ const MetaplexMenu = () => {
             <Menu>
               <Menu.Item>
                 <Link to={`/`}>
-                  <Button className="app-btn">Explore</Button>
+                  <Button className="app-btn">explore</Button>
                 </Link>
               </Menu.Item>
               <Menu.Item>
                 <Link to={`/artworks`}>
                   <Button className="app-btn">
-                    {connected ? 'My Items' : 'Artworks'}
+                    {connected ? 'my murals' : 'murals'}
                   </Button>
                 </Link>
               </Menu.Item>
               <Menu.Item>
                 <Link to={`/artists`}>
-                  <Button className="app-btn">Creators</Button>
+                  <Button className="app-btn">creators</Button>
                 </Link>
               </Menu.Item>
             </Menu>

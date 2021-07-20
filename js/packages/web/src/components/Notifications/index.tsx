@@ -481,7 +481,7 @@ export function Notifications() {
       content={content}
       trigger="click"
     >
-      <h1 className="title">M</h1>
+      <h2 className="title">murals.art</h2>
     </Popover>
   );
 
